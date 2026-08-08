@@ -1,0 +1,118 @@
+.container {
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logoContainer:hover {
+  transform: scale(1.02);
+}
+
+.logoBadge {
+  background: linear-gradient(135deg, var(--brand-primary), #004182);
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.brandTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.navbarOptionContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.buttonJoin {
+  background: var(--brand-primary);
+  color: white;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.buttonJoin span {
+  font-weight: 600;
+}
+
+.buttonJoin:hover {
+  background: var(--brand-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.buttonJoin:active {
+  transform: translateY(0);
+}
+
+.profileBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.profileBadge:hover {
+  background: var(--bg-primary);
+  border-color: var(--border-light);
+}
+
+.profileAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px var(--border-light);
+}
+
+.profileName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .profileName {
+    display: none;
+  }
+}

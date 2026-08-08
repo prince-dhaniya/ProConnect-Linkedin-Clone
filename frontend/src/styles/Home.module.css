@@ -1,0 +1,226 @@
+/* Premium Container with subtle gradient meshes */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 70px);
+  overflow: hidden;
+  position: relative;
+  background-color: #FAFAFA;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(217,100%,94%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(217,100%,92%,1) 0px, transparent 50%);
+}
+
+/* Subtle animated glow in the background */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(10, 102, 194, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.1) translate(3%, 3%); }
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  min-height: 75vh;
+}
+
+.mainContainer_left {
+  flex: 1;
+  max-width: 600px;
+  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* The Main Headline with a beautiful gradient */
+.mainContainer_left p:first-child {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.5rem 0;
+  color: #111827;
+  background: linear-gradient(135deg, #111827 0%, #374151 40%, #0A66C2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* The Subheadline */
+.mainContainer_left p:nth-child(2) {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: #4B5563;
+  line-height: 1.6;
+  margin: 0 0 2.5rem 0;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+/* The Premium Call to Action Button */
+.buttonJoin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1f2937 0%, #000000 100%);
+  color: #FFFFFF;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.4),
+    0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Shiny Sweep Effect */
+.buttonJoin::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-20deg);
+  transition: all 0.6s ease;
+}
+
+.buttonJoin:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 20px 30px -10px rgba(0, 0, 0, 0.5),
+    0 10px 15px -10px rgba(0, 0, 0, 0.3);
+}
+
+.buttonJoin:hover::after {
+  left: 150%;
+}
+
+.buttonJoin p {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* The Image Side with 3D Tilt */
+.mainContainer_right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  perspective: 1000px;
+  animation: slideInRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.mainContainer_right img {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 40px rgba(10, 102, 194, 0.1);
+  transform: rotateY(-10deg) rotateX(5deg);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* A smooth floating animation */
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotateY(-10deg) rotateX(5deg); }
+  50% { transform: translateY(-15px) rotateY(-12deg) rotateX(8deg); }
+  100% { transform: translateY(0px) rotateY(-10deg) rotateX(5deg); }
+}
+
+.mainContainer_right:hover img {
+  transform: translateY(-5px) rotateY(-5deg) rotateX(2deg);
+}
+
+/* Decorative glowing orb behind the image */
+.mainContainer_right::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(40px);
+  z-index: -1;
+  border-radius: 50%;
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Full Responsiveness */
+@media (max-width: 960px) {
+  .mainContainer {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .mainContainer_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .mainContainer_right {
+    justify-content: center;
+  }
+
+  .mainContainer_right img {
+    transform: none;
+    animation: simpleFloat 6s ease-in-out infinite;
+  }
+  
+  .mainContainer_right:hover img {
+    transform: translateY(-5px);
+  }
+  
+  @keyframes simpleFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+}

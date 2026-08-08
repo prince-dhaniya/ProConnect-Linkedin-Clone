@@ -1,0 +1,117 @@
+.homeContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.homeContainer_leftBar {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.homeContainer_leftBar > div {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1rem 0.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  position: sticky;
+  top: 90px;
+}
+
+.sideBarOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.sideBarOption:hover {
+  background: var(--bg-secondary);
+  color: var(--brand-primary);
+  transform: translateX(4px);
+}
+
+.sideBarOption svg {
+  width: 1.4em;
+  height: 1.4em;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.sideBarOption p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.homeContainer_feedContainer {
+  flex: 1;
+  min-width: 0;
+}
+
+.homeContainer_extraContainer {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.mobileNavBar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .homeContainer_leftBar {
+    display: none;
+  }
+
+  .homeContainer_extraContainer {
+    display: none;
+  }
+
+  .homeContainer {
+    padding-bottom: 80px; /* Space for mobile nav */
+  }
+
+  .mobileNavBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-light);
+    padding: 0.8rem 0 calc(0.8rem + env(safe-area-inset-bottom));
+    z-index: 100;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .mobileNavBar .sideBarOption {
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 0;
+    border-radius: 8px;
+  }
+
+  .mobileNavBar .sideBarOption:hover {
+    transform: none;
+    background: var(--bg-secondary);
+  }
+
+  .mobileNavBar .sideBarOption svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}

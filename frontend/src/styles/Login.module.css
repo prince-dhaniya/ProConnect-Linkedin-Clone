@@ -1,0 +1,102 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  background: radial-gradient(circle at center, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.cardContainer {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.cardContainer_left {
+  flex: 1;
+  padding: 3rem 2.5rem;
+}
+
+.cardContainer_right {
+  display: none;
+}
+
+.cardleft_heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 2rem 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputRow .inputField {
+  flex: 1;
+}
+
+.inputField {
+  padding: 0.9rem 1.2rem;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  background: var(--bg-primary);
+  transition: all 0.2s ease;
+}
+
+.inputField:focus {
+  border-color: var(--brand-primary);
+  background: white;
+  box-shadow: 0 0 0 4px var(--brand-light);
+}
+
+.buttonWithOutline {
+  padding: 0.9rem 1.2rem;
+  border: 2px solid var(--brand-primary);
+  border-radius: 30px;
+  color: var(--brand-primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  margin-top: 0.5rem;
+}
+
+.buttonWithOutline:hover {
+  background: var(--brand-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.2);
+  transform: translateY(-1px);
+}
+
+.buttonWithOutline p {
+  margin: 0;
+}

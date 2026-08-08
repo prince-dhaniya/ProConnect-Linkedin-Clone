@@ -1,0 +1,297 @@
+.container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.backDropContianer {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #0A66C2 0%, #38BDF8 100%);
+  position: relative;
+}
+
+.coverEditBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  color: #0A66C2;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.coverEditBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.15);
+}
+
+.coverEditBtn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.backDrop {
+  position: absolute;
+  bottom: -60px;
+  left: 2.5rem;
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  border: 4px solid var(--bg-card);
+  background-color: white;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+  overflow: visible;
+}
+
+.backDrop img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.backDrop_overlay {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0A66C2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-light);
+}
+
+.backDrop_overlay:hover {
+  transform: scale(1.1);
+  background: #f8fafc;
+}
+
+.profileContainer_details {
+  padding: 5rem 2.5rem 2.5rem 2.5rem;
+}
+
+.profileHeaderFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.profileName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.2rem 0;
+}
+
+.profileUsername {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+.profileBio {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.profileMeta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.metaItem {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.linkBadge {
+  padding: 0.4rem 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.linkBadge:hover {
+  background: #0A66C2;
+  color: white;
+}
+
+.actionButtonsTop {
+  display: flex;
+  gap: 1rem;
+}
+
+.editProfileBtn {
+  background: #0A66C2;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editProfileBtn:hover {
+  background: #004182;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.signOutBtnOutline {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 0.7rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signOutBtnOutline:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.sectionBlock {
+  border-top: 1px solid var(--border-light);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.sectionHeading {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skillBadge {
+  background: rgba(10, 102, 194, 0.1);
+  color: #0A66C2;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experienceItem {
+  display: flex;
+  gap: 1rem;
+}
+
+.expIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.expDetails h4 {
+  margin: 0 0 0.3rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.expCompany {
+  margin: 0 0 0.2rem 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.expYears {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.recentActivityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.activityCard {
+  aspect-ratio: 1;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.activityImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.activityTextOnly {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+POST https://localhost:9080/register HTTP/1.1
+
+Content-Type: application/json
+
+{
+    "username"
+    "password"
+    "email":
+    "name":
+}
