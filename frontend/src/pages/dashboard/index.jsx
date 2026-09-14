@@ -303,7 +303,7 @@ export default function Dashboard() {
                         }}
                     >
                         <div className={styles.onboardingModal}>
-                            <h2>Welcome to LinkedIn Clone!</h2>
+                            <h2>Welcome to ProConnect!</h2>
                             <p>Let's set up your profile so others can know you better.</p>
                             
                             <div className={styles.onboardingForm}>
